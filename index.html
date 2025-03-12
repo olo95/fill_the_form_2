@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badanie</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .link {
+            display: none;
+            text-decoration: none;
+            font-size: 24px;
+            color: #007bff;
+            border: 2px solid #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .link:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Two links -->
+    <a id="link1" class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSfICaB-Pf75W3b5yG6-OXw5QkLXrZczrc_pFctQnfWYlP65Mg/viewform?usp=sharing" target="_blank">Kliknij aby przejść do badania</a>
+    <a id="link2" class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdL9CfQ4rxQEnSuquPBc2e6kzQg79p8RsqvuTICghmuPLN_rg/viewform?usp=sharing" target="_blank">Kliknij aby przejść do badania</a>
+
+    <script>
+        // Randomly show one link
+        const links = document.querySelectorAll('.link');
+        const randomIndex = Math.floor(Math.random() * links.length);
+        links[randomIndex].style.display = 'block';
+    </script>
+</body>
+</html>
